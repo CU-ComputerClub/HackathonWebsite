@@ -1,11 +1,13 @@
 var sponsors = {
     "Cardiff University": "http://cs.cf.ac.uk",
+    "Linode": "https://linode.com/",
 }
 
 jQuery(function($, undefined) {
     $('#hack_console').terminal(function(command, term) {
         if (command !== '') {
             switch(command){
+                case "ls":
                 case "help":
                     term.echo('Possible Commands: ');
                     term.echo('help location prizes sponsors register previous');
