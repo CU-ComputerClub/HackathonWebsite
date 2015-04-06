@@ -8,17 +8,17 @@ jQuery(function($, undefined) {
             switch(command){
                 case "help":
                     term.echo('Possible Commands: ');
-                    term.echo('help location prizes sponsors register');
+                    term.echo('help location prizes sponsors register previous');
                     break;
                 case "location":
                     term.echo("The Open Sauce Hackathon is taking place in Seminar Rooms 1 \&amp; 2 of the Cardiff University Trevitick Building");
                     term.echo("<iframe width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" src=\"https://www.google.com/maps/embed/v1/place?q=Trevithick%20Building%2C%20Cardiff&key=AIzaSyDRPV82axLe-dsGYrCPZfISL4jpQ39DGxU\"></iframe>", {raw:true});
                     break;
                 case "prizes":
-                    term.echo("We don't know yet. A bucket load of cash, maybe?");
+                    term.echo("To be announced!");
                     break;
                 case "sponsors":
-                    term.echo("We have been sponored by the likes of: ");
+                    term.echo("The 2015 Open Sauce Hackathon has been sponsored by: ");
                     for(sponsor in sponsors){
                         term.echo("<a href=\""+sponsors[sponsor]+"\">"+sponsor, {raw:true});
                     }
@@ -26,6 +26,12 @@ jQuery(function($, undefined) {
                 case "register":
                     term.echo("Taking you to eventbrite...");
                     window.open("http://eventbrite.com");
+                    break;
+                case "previous":
+                    term.echo("Previous Hackathons: ");
+                    term.echo("<a href=\"https://www.cs.cf.ac.uk/hackathon/2012/\">2012 Open Sauce Hackathon</a>", {raw:true});
+                    term.echo("<a href=\"https://www.cs.cf.ac.uk/hackathon/2013/\">2013 Open Sauce Hackathon</a>", {raw:true});
+                    term.echo("<a href=\"https://www.cs.cf.ac.uk/hackathon/2014/\">2014 CyberSecurity Makespace</a>", {raw:true});
                     break;
                 default:
                     term.error("Unknown Command");
