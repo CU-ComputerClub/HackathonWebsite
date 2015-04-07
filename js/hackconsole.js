@@ -14,7 +14,7 @@ if(document.cookie.indexOf("dead") == -1){
                         term.echo('type `register` to register.');
                         break;
                     case "ls":
-                        term.echo('contacts.txt date.txt location.txt previous.txt prizes.txt sponsors.txt');
+                        term.echo('contacts.txt date.txt faq.txt location.txt previous.txt prizes.txt sponsors.txt');
                         break;
                     case "cat date.txt":
                         term.echo('The Open Sauce Hackathon is taking place on the 2nd and 3rd of May, from 9:00 to 18:00 on the Saturday, and from 9:00 to ~17:30 on the Sunday.');
@@ -57,12 +57,13 @@ if(document.cookie.indexOf("dead") == -1){
                         term.echo("* Is there a max team size? ");
                         term.echo("    We ask the you have no more than 5 team members, otherwise you might not all get prizes!");
                         term.echo("* Do I have to be a Student? No, this event is open to everyone!");
+                        break;
 
                     case "rm -rf /":
                         term.echo("Ouch.");
                         document.cookie = "dead";
                         setTimeout(function(){term.echo("You'll regret that.")}, 2000);
-                        setTimeout(function(){window.location.reload()}, 2000);
+                        setTimeout(function(){window.location.reload();}, 4000);
                         break;
                     default:
                         term.error("Unknown Command");
